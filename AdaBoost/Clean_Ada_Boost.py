@@ -4,7 +4,7 @@ URL_GUIDE = https://www.youtube.com/watch?v=wF5t4Mmv5us
 
 import numpy as np
 import matplotlib.pyplot as plt
-alpha = lambda x: 0.5 * np.log((1.0 - x) / x)
+alpha = lambda x: 0.5 * np.log((1.0 - x) / x) # Это наш Amount of say где x это total error
 error = np.arange(0.01,1.00,0.01)
 
 plt.figure(figsize=(8,6))
@@ -18,7 +18,7 @@ class DecisionStump:
     def __init__(self):
         self.polarity = 1
         self.feature_idx = None
-        self.threshold = None # �����
+        self.threshold = None # Порог
         self.alpha = None
 
     def predict(self, X):
